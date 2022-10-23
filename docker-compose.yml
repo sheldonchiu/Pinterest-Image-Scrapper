@@ -12,7 +12,8 @@ services:
       - SUBFOLDER=/ #optional
       - KEYBOARD=en-us-qwerty #optional
     volumes:
-      - /home/sheldon/mecha_image/output:/output
+      - /home/sheldon/images:/output
+      - /home/sheldon/mecha_image:/app
     ports:
       - 3002:3000
     # devices:

@@ -89,9 +89,12 @@ class PinterestImageScrapper():
                 soup = BeautifulSoup(self.driver.page_source, "html.parser")
                 results = soup.findAll("div", role="listitem")
                 for result in results:
-                    link = result.find('a')['href']
-                    if link not in page_urls:
-                        page_urls.append(result.find('a')['href'])
+                    try:
+                        link = result.find('a')['href']
+                        if link not in page_urls:
+                            page_urls.append(result.find('a')['href'])
+                    except:
+                        pass
                 # scroll to bottom to load more images
                 last_height = self.driver.execute_script("return document.body.scrollHeight")
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")

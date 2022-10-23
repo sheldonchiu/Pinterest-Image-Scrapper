@@ -13,10 +13,10 @@ if __name__ == "__main__":
     image_path = "/output"
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-    search_keys= ['space battleship']
+    search_keys= ['gundam']
 
     #Parameters
-    number_of_images = 10
+    number_of_images = 1000
     headless = True
     min_resolution=(500,500)
     max_resolution=(9999,9999)
