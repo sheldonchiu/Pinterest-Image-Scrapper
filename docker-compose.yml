@@ -1,0 +1,20 @@
+version: "3"
+services:
+  webtop:
+    image: sheldonchiu/mecha_image
+    container_name: mecha_image
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Asia/Macao
+      - SUBFOLDER=/ #optional
+      - KEYBOARD=en-us-qwerty #optional
+    volumes:
+      - /home/sheldon/mecha_image/output:/output
+    ports:
+      - 3002:3000
+    # devices:
+      # - /dev/dri:/dev/dri #optional
+    shm_size: "1gb" #optional
