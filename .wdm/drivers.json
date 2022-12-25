@@ -1,0 +1,10 @@
+{
+    "linux64_chromedriver_108.0.5359_for_108.0.5359": {
+        "timestamp": "17/12/2022",
+        "binary_path": "/app/.wdm/drivers/chromedriver/linux64/108.0.5359/chromedriver"
+    },
+    "linux64_chromedriver_106.0.5249_for_106.0.5249": {
+        "timestamp": "24/12/2022",
+        "binary_path": "/home/sheldon/mecha_image/.wdm/drivers/chromedriver/linux64/106.0.5249/chromedriver"
+    }
+}

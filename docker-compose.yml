@@ -1,7 +1,7 @@
 version: "3"
 services:
   webtop:
-    image: sheldonchiu/mecha_image
+    image: mecha_image
     container_name: mecha_image
     security_opt:
       - seccomp:unconfined #optional
