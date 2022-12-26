@@ -11,7 +11,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager   
+# from webdriver_manager.chrome import ChromeDriverManager   
+from webdriver_manager.firefox import GeckoDriverManager
 from bs4 import BeautifulSoup
 
 #import helper libraries
@@ -44,7 +45,7 @@ class PinterestImageScrapper():
         options = Options()
         if(headless):
             options.add_argument('--headless')
-        driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
+        driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
         driver.set_window_size(1920,1080)
         driver.get(baseURL)
 
